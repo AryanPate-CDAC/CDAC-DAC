@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class EmployeeBonus {
+public class BonusTernary {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -10,12 +10,9 @@ public class EmployeeBonus {
         System.out.print("Enter years of service: ");
         int years = sc.nextInt();
 
-        if (years > 5) {
-            double bonus = salary * 0.05;
-            System.out.println("Bonus amount: " + (int)bonus);
-        } else {
-            System.out.println("No bonus awarded.");
-        }
+        double bonus = (years > 5) ? (salary * 0.05) : 0;
+
+        System.out.println("Bonus: " + (int)bonus);
 
         sc.close();
     }
